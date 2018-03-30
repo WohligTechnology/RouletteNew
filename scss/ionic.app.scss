@@ -453,7 +453,7 @@ tr {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #fff;
+  // background: #fff;
   margin: 0 0 0 auto;
   cursor: move;
 }
@@ -475,6 +475,7 @@ tr {
 
 //scss for rulette spinner
 .spinner_main {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/138980/184983947.jpg);
   .control {
     margin: 30px auto;
     text-align: center;
