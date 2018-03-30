@@ -1,168 +1,201 @@
 <div class="roulette">
+  <div class="roulette-cell">
     <div class="div-inline upper-button">
-<span>Money</span>
-<p>$1000</p>
+      <span>Money</span>
+      <p>$1000</p>
     </div>
-        <div class="div-inline upper-button">
-<span>Money</span>
-<p>$1000</p>
+    <div class="div-inline upper-button">
+      <span>Money</span>
+      <p>$1000</p>
     </div>
-        <div class="div-inline upper-button">
-<span>Money</span>
-<p>$1000</p>
+    <div class="div-inline upper-button">
+      <span>Money</span>
+      <p>$1000</p>
     </div>
-  <table>
-    <tr class="nums">
-      <td class="num green zero" rowspan="3"><span>0</span></td>
-      <td>
-        <div class="num red">
-          <span>3</span>
-        </div>
-      </td>
-      <td>
-        <div class="num black"><span>6</span>
-        </div>
-      </td>
-      <td>
-        <div class="num red"><span>9</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>12</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>15</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>18</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>21</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>24</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>27</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>30</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>33</span>
-        </div>
-      </td>
-      <td>
-        <div class="num red"><span>36</span></div>
-      </td>
-      <td class="sector" data-sector="1"><span class="vt">2 to 1</span></td>
-      <td class="num history" rowspan="5"><span>history</span></td>
-    </tr>
-    <tr class="nums">
-      <td class="hidden"></td>
-      <td>
-        <div class="num black"><span>2</span>
-        </div>
-      </td>
-      <td>
-        <div class="num red"><span>5</span>
-        </div>
-      </td>
-      <td>
-        <div class="num black"><span>8</span>
-        </div>
-      </td>
-      <td>
-        <div class="num black"><span>11</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>14</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>17</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>20</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>23</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>26</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>29</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>32</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>35</span></div>
-      </td>
-      <td class="sector" data-sector="2"><span class="vt">2 to 1</span></td>
-    </tr>
-    <tr class="nums">
-      <td class="hidden"></td>
-      <td>
-        <div class="num red"><span>1</span>
-        </div>
-      </td>
-      <td>
-        <div class="num black"><span>4</span>
-        </div>
-      </td>
-      <td>
-        <div class="num red"><span>7</span>
-        </div>
-      </td>
-      <td>
-        <div class="num black"><span>10</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>13</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>16</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>19</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>22</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>25</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>28</span></div>
-      </td>
-      <td>
-        <div class="num black"><span>31</span></div>
-      </td>
-      <td>
-        <div class="num red"><span>34</span></div>
-      </td>
-      <td class="sector" data-sector="3"><span class="vt">2 to 1</span></td>
-       
-    </tr>
-    <tr>
-      <td class="empty"></td>
-      <td colspan="4" class="sector" data-sector="4">1st 12</td>
-      <td colspan="4" class="sector" data-sector="5">2nd 12</td>
-      <td colspan="4" class="sector" data-sector="6">3rd 12</td>
-      <td class="empty"></td>
-    </tr>
-    <tr>
-      <td class="empty"></td>
-      <td colspan="2" class="sector" data-sector="7">1 to 18</td>
-      <td colspan="2" class="sector" data-sector="8">EVEN</td>
-      <td colspan="2" class="sector red" data-sector="9">RED</td>
-      <td colspan="2" class="sector black" data-sector="10">BLACK</td>
-      <td colspan="2" class="sector" data-sector="11">ODD</td>
-      <td colspan="2" class="sector" data-sector="12">19 to 36</td>
-      <td class="empty"></td>
-      
-    </tr>
-    <tr>
-<input type="button" value="spin" id='spin' ng-click="openModal()" /></tr>
-  </table>
+    <div class="width100">
+      <div class="div-inline width10 history">
+        <ul>
+          <li style="margin-top:3px;"><img src="img/coin1.png"></li>
+          <li><img src="img/coin2.png"></li>
+          <li><img src="img/coin3.png"></li>
+          <li><img src="img/coin4.png"></li>
+          <li><img src="img/coin5.png"></li>
+          <li><img src="img/coin6.png"></li>
+        </ul>
+      </div>
+      <div class="div-inline width80">
+        <table>
+          <tr class="nums">
+            <td class="num green zero" rowspan="3"><span>0</span></td>
+            <td>
+              <div class="num red">
+                <span>3</span>
+              </div>
+            </td>
+            <td>
+              <div class="num black"><span>6</span>
+              </div>
+            </td>
+            <td>
+              <div class="num red"><span>9</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>12</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>15</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>18</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>21</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>24</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>27</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>30</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>33</span>
+              </div>
+            </td>
+            <td>
+              <div class="num red"><span>36</span></div>
+            </td>
+            <td class="sector" data-sector="1"><span class="vt">2 to 1</span></td>
+            <!--<td class="num history" rowspan="5"><span>history</span></td>-->
+          </tr>
+          <tr class="nums">
+            <td class="hidden"></td>
+            <td>
+              <div class="num black"><span>2</span>
+              </div>
+            </td>
+            <td>
+              <div class="num red"><span>5</span>
+              </div>
+            </td>
+            <td>
+              <div class="num black"><span>8</span>
+              </div>
+            </td>
+            <td>
+              <div class="num black"><span>11</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>14</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>17</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>20</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>23</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>26</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>29</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>32</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>35</span></div>
+            </td>
+            <td class="sector" data-sector="2"><span class="vt">2 to 1</span></td>
+          </tr>
+          <tr class="nums">
+            <td class="hidden"></td>
+            <td>
+              <div class="num red"><span>1</span>
+              </div>
+            </td>
+            <td>
+              <div class="num black"><span>4</span>
+              </div>
+            </td>
+            <td>
+              <div class="num red"><span>7</span>
+              </div>
+            </td>
+            <td>
+              <div class="num black"><span>10</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>13</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>16</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>19</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>22</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>25</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>28</span></div>
+            </td>
+            <td>
+              <div class="num black"><span>31</span></div>
+            </td>
+            <td>
+              <div class="num red"><span>34</span></div>
+            </td>
+            <td class="sector" data-sector="3"><span class="vt">2 to 1</span></td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <td colspan="4" class="sector" data-sector="4">1st 12</td>
+            <td colspan="4" class="sector" data-sector="5">2nd 12</td>
+            <td colspan="4" class="sector" data-sector="6">3rd 12</td>
+            <td class="empty"></td>
+          </tr>
+          <tr>
+            <td class="empty"></td>
+            <td colspan="2" class="sector" data-sector="7">1 to 18</td>
+            <td colspan="2" class="sector" data-sector="8">EVEN</td>
+            <td colspan="2" class="sector red" data-sector="9">RED</td>
+            <td colspan="2" class="sector black" data-sector="10">BLACK</td>
+            <td colspan="2" class="sector" data-sector="11">ODD</td>
+            <td colspan="2" class="sector" data-sector="12">19 to 36</td>
+            <td class="empty"></td>
+          </tr>
+          <tr>
+            <!--<input type="button" value="spin" id='spin' ng-click="openModal()" /></tr>-->
+        </table>
+      </div>
+      <div class="div-inline width10 history">
+        History
+      </div>
+    </div>
+    <div class="div-inline upper-button">
+      <span>Money</span>
+      <p>$1000</p>
+    </div>
+    <div class="div-inline upper-button pdbutton">
+      <span>Tier</span>
+    </div>
+    <div class="div-inline upper-button pdbutton">
+      <span>Orphelins</span>
+    </div>
+    <div class="div-inline upper-button pdbutton">
+      <span>Neighbors</span>
+    </div>
+    <div class="div-inline upper-button pdbutton">
+      <span>Finals Bet</span>
+    </div>
+  </div>
 </div>
