@@ -38,6 +38,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     cache:false,
     templateUrl: 'templates/home.html',
     controller:'HomeCtrl'
+  })
+
+  .state('spinner', {
+    url: '/spinner',
+    cache:false,
+    templateUrl: 'templates/spinner.html',
+    controller:'SpinnerCtrl'
   });
 
 
