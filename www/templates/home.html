@@ -1,4 +1,16 @@
 <div class="roulette">
+    <div class="div-inline upper-button">
+<span>Money</span>
+<p>$1000</p>
+    </div>
+        <div class="div-inline upper-button">
+<span>Money</span>
+<p>$1000</p>
+    </div>
+        <div class="div-inline upper-button">
+<span>Money</span>
+<p>$1000</p>
+    </div>
   <table>
     <tr class="nums">
       <td class="num green zero" rowspan="3"><span>0</span></td>
@@ -27,7 +39,8 @@
         <div class="num red"><span>21</span></div>
       </td>
       <td>
-          <div class="num black"><span>24</span></div></td>
+        <div class="num black"><span>24</span></div>
+      </td>
       <td>
         <div class="num red"><span>27</span></div>
       </td>
@@ -35,52 +48,57 @@
         <div class="num red"><span>30</span></div>
       </td>
       <td>
-          <div class="num black"><span>33</span>
-          </div></td>
+        <div class="num black"><span>33</span>
+        </div>
+      </td>
       <td>
         <div class="num red"><span>36</span></div>
       </td>
       <td class="sector" data-sector="1"><span class="vt">2 to 1</span></td>
+      <td class="num history" rowspan="5"><span>history</span></td>
     </tr>
     <tr class="nums">
       <td class="hidden"></td>
       <td>
         <div class="num black"><span>2</span>
-          </div></td>
-            <td>
-              <div class="num red"><span>5</span>
-                </div></td>
-                  <td>
-                    <div class="num black"><span>8</span>
-                      </div></td>
-                        <td>
-                          <div class="num black"><span>11</span></div>
-                        </td>
-                        <td>
-                          <div class="num red"><span>14</span></div>
-                        </td>
-                        <td>
-                          <div class="num black"><span>17</span></div>
-                        </td>
-                        <td>
-                          <div class="num black"><span>20</span></div>
-                        </td>
-                        <td>
-                          <div class="num red"><span>23</span></div>
-                        </td>
-                        <td>
-                          <div class="num black"><span>26</span></div>
-                        </td>
-                        <td>
-                          <div class="num black"><span>29</span></div>
-                        </td>
-                        <td>
-                          <div class="num red"><span>32</span></div>
-                        </td>
-                        <td>
-                          <div class="num black"><span>35</span></div>
-                        </td>
-                        <td class="sector" data-sector="2"><span class="vt">2 to 1</span></td>
+        </div>
+      </td>
+      <td>
+        <div class="num red"><span>5</span>
+        </div>
+      </td>
+      <td>
+        <div class="num black"><span>8</span>
+        </div>
+      </td>
+      <td>
+        <div class="num black"><span>11</span></div>
+      </td>
+      <td>
+        <div class="num red"><span>14</span></div>
+      </td>
+      <td>
+        <div class="num black"><span>17</span></div>
+      </td>
+      <td>
+        <div class="num black"><span>20</span></div>
+      </td>
+      <td>
+        <div class="num red"><span>23</span></div>
+      </td>
+      <td>
+        <div class="num black"><span>26</span></div>
+      </td>
+      <td>
+        <div class="num black"><span>29</span></div>
+      </td>
+      <td>
+        <div class="num red"><span>32</span></div>
+      </td>
+      <td>
+        <div class="num black"><span>35</span></div>
+      </td>
+      <td class="sector" data-sector="2"><span class="vt">2 to 1</span></td>
     </tr>
     <tr class="nums">
       <td class="hidden"></td>
@@ -124,6 +142,7 @@
         <div class="num red"><span>34</span></div>
       </td>
       <td class="sector" data-sector="3"><span class="vt">2 to 1</span></td>
+       
     </tr>
     <tr>
       <td class="empty"></td>
@@ -141,6 +160,9 @@
       <td colspan="2" class="sector" data-sector="11">ODD</td>
       <td colspan="2" class="sector" data-sector="12">19 to 36</td>
       <td class="empty"></td>
+      
     </tr>
+    <tr>
+<input type="button" value="spin" id='spin' ng-click="openModal()" /></tr>
   </table>
-  </div>
+</div>
