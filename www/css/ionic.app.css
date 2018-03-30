@@ -9875,7 +9875,8 @@ a.button {
   transition-duration: 0s; }
 
 body.moving {
-  cursor: move; }
+  cursor: move;
+  font-family: 'Crimson Text', serif; }
 
 .roulette {
   padding: 30px;
@@ -9886,7 +9887,7 @@ body.moving {
 	margin:300px 0 0 -230px;*/ }
 
 .roulette table {
-  float: left; }
+  width: 100%; }
 
 .roulette table,
 tr {
@@ -9898,21 +9899,19 @@ tr {
   margin: 2px;
   border-spacing: 0;
   border-collapse: collapse;
-  width: 37px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50px;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
   font-size: 18px;
   color: white;
+  margin: 0 auto;
   white-space: nowrap; }
 
 .roulette td {
-  border-spacing: 0;
-  border-collapse: collapse;
   border: 2px solid rgba(255, 255, 0, 0.7);
-  width: 50px;
   height: 46px;
   border-radius: 50px;
   text-align: center;
@@ -9922,10 +9921,18 @@ tr {
   color: white;
   white-space: nowrap; }
 
+.history {
+  background: black;
+  border-radius: 0px !important;
+  vertical-align: top !important; }
+  .history span {
+    transform: rotate(0deg) !important;
+    font-size: 12px;
+    margin: 8px; }
+
 /* elements */
 .roulette .sector {
-  background: #1C7022;
-  color: #8EB891; }
+  background: #1C7022; }
 
 .roulette .sector .vt {
   font-size: 15px; }
@@ -9947,16 +9954,13 @@ tr {
 
 /* colors */
 .roulette .green {
-  background: #1C7022;
-  color: #8EB891; }
+  background: #1C7022; }
 
 .roulette .red {
-  background: #A91607;
-  color: #8EB891; }
+  background: #A91607; }
 
 .roulette .black {
-  background: #0E3811;
-  color: #8EB891; }
+  background: #100f0d; }
 
 /* cells hovers */
 .roulette .sector.hover,
@@ -10190,3 +10194,16 @@ tr {
   background: #fff;
   margin: 0 0 0 auto;
   cursor: move; }
+
+.upper-button {
+  margin-bottom: 5px;
+  background: black;
+  color: white;
+  padding: 0px 30px;
+  margin-right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.46); }
+  .upper-button p {
+    margin: 0px; }
+
+.div-inline {
+  display: inline-block; }
