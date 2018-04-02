@@ -9883,7 +9883,7 @@ p {
   margin: 0px; }
 
 .pdbutton {
-  padding: 10px 25px !important; }
+  padding: 10px 20px !important; }
 
 .roulette {
   padding: 20px;
@@ -9906,11 +9906,22 @@ tr {
   border-collapse: collapse;
   /*border-spacing: 0;*/ }
 
+.history-list .num {
+  border-radius: 50px;
+  width: 30px;
+  height: 30px; }
+
 .width100 {
   width: 100%; }
 
 .width10 {
   width: 9%; }
+
+.width12 {
+  width: 12%; }
+
+.width6 {
+  width: 6%; }
 
 .width80 {
   width: 80%; }
@@ -9953,7 +9964,9 @@ tr {
   .history span {
     transform: rotate(0deg) !important;
     font-size: 12px;
-    margin: 8px; }
+    margin: 5px;
+    padding-top: 5px;
+    font-weight: 600; }
 
 /* elements */
 .roulette .sector {
@@ -10235,18 +10248,14 @@ tr {
 .spinner_main {
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/138980/184983947.jpg); }
   .spinner_main .control {
-    margin: 30px auto;
     text-align: center;
     color: #fff;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/138980/308851c77ab4799373173c1c4e8e9e9e.jpg);
     background-size: contain;
-    padding: 15px;
     border-radius: 5px;
     width: 100%;
-    border-bottom: 2px solid #291906;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: right;
     flex-direction: column; }
   .spinner_main .pieBackground {
     background-color: #f0f0f0;
@@ -10504,7 +10513,7 @@ tr {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
     /* IE6-8 fallback on horizontal gradient */ }
   .spinner_main .button {
-    width: 5em;
+    width: 8em;
     height: 3em;
     background: none repeat scroll 0% 0% #5d4117;
     color: #FFF;

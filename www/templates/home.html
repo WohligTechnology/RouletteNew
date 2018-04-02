@@ -12,8 +12,9 @@
       <span>Money</span>
       <p>$1000</p>
     </div>
+         
     <div class="width100">
-      <div class="div-inline width10 history">
+      <div class="div-inline width6 history">
         <ul>
           <li style="margin-top:3px;"><img src="img/coin1.png"></li>
           <li><img src="img/coin2.png"></li>
@@ -177,8 +178,14 @@
             <!--<input type="button" value="spin" id='spin' ng-click="openModal()" /></tr>-->
         </table>
       </div>
-      <div class="div-inline width10 history">
+      <div class="div-inline width12 history">
         History
+        <ul class="history-list">
+        <li class="div-inline"> <div class="num red"><span>12</span></div></li>
+        <li class="div-inline"> <div class="num green"><span>22</span></div></li>
+        <li class="div-inline"> <div class="num green"><span>10</span></div></li>
+        <li class="div-inline"> <div class="num red"><span>5</span></div></li>
+        </ul>
       </div>
     </div>
     <div class="div-inline upper-button">
@@ -197,5 +204,6 @@
     <div class="div-inline upper-button pdbutton">
       <span>Finals Bet</span>
     </div>
+     <div id="btnSpin" class="div-inline upper-button pdbutton" ui-sref="spinner">Spin</div>
   </div>
 </div>
