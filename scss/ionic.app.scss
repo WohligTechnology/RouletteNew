@@ -432,8 +432,9 @@ tr {
   position: relative;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  background: #000;
+  font-size: 1.3em;
+  // border-radius: 50%;
+  // background: #000;
 }
 
 .spinner-in {
@@ -527,8 +528,8 @@ tr {
     font-size: 1.25em;
   }
   .pie {
-    box-shadow: inset 0 0 1em #000;
-    border: solid .1em #FFF;
+  //  box-shadow: inset 0 0 2em #201c1c; 
+    /* border: solid .1em #FFF; */
     position: absolute;
     width: 20em;
     height: 20em;
@@ -661,13 +662,13 @@ tr {
   .platebg {
     position: absolute;
     z-index: 50;
-    background: rgba(51, 29, 1, 1);
+    // background: rgba(51, 29, 1, 1);
     width: 19em;
     height: 19em;
     border-radius: 19em;
     left: 3em;
     top: 3em;
-    box-shadow: inset 0 0 1em rgba(0, 0, 0, 1);
+    box-shadow: inset 0 0 4em rgba(0, 0, 0, 1);
   }
   .platetop {
     position: absolute;
@@ -681,22 +682,21 @@ tr {
     box-shadow: 0px 0px 0.6em rgba(0, 0, 0, 0.3), -1.5em -1.5em 4em rgba(90, 71, 17, 1) inset;
   }
   .spinner_bg{
-    background: url('../img/bg_wheel .jpg');
+    background: url('../img/bg_wheel.jpg');
 background-repeat: no-repeat;
 background-position: center center;    
 height: 100%;
 width: 100%;
   }
   .spinner {
-    margin: 0 auto;
+      margin: 0 auto;
+    top: 12%;
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
     height: 29em;
     width: 29em;
-    border-radius: 25em;
-    border: solid 2em rgba(41, 25, 6, 1);
-    box-shadow: 0 0 1em rgba(42, 40, 40, 1);
-    font-size: 1em;
+    left: 5%;
+    transform: rotateX(-46deg);
   }
   .ball {
     position: absolute;

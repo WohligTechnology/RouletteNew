@@ -10200,8 +10200,7 @@ tr {
   position: relative;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  background: #000; }
+  font-size: 1.3em; }
 
 .spinner-in {
   position: absolute;
@@ -10281,8 +10280,7 @@ tr {
   font-size: 1.25em; }
 
 .spinner_main .pie {
-  box-shadow: inset 0 0 1em #000;
-  border: solid .1em #FFF;
+  /* border: solid .1em #FFF; */
   position: absolute;
   width: 20em;
   height: 20em;
@@ -10411,13 +10409,12 @@ tr {
 .spinner_main .platebg {
   position: absolute;
   z-index: 50;
-  background: #331d01;
   width: 19em;
   height: 19em;
   border-radius: 19em;
   left: 3em;
   top: 3em;
-  box-shadow: inset 0 0 1em black; }
+  box-shadow: inset 0 0 4em black; }
 
 .spinner_main .platetop {
   position: absolute;
@@ -10431,7 +10428,7 @@ tr {
   box-shadow: 0px 0px 0.6em rgba(0, 0, 0, 0.3), -1.5em -1.5em 4em #5a4711 inset; }
 
 .spinner_main .spinner_bg {
-  background: url("../img/bg_wheel .jpg");
+  background: url("../img/bg_wheel.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   height: 100%;
@@ -10439,14 +10436,13 @@ tr {
 
 .spinner_main .spinner {
   margin: 0 auto;
+  top: 12%;
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 29em;
   width: 29em;
-  border-radius: 25em;
-  border: solid 2em #291906;
-  box-shadow: 0 0 1em #2a2828;
-  font-size: 1em; }
+  left: 5%;
+  transform: rotateX(-46deg); }
 
 .spinner_main .ball {
   position: absolute;
