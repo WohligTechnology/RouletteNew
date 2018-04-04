@@ -14,14 +14,17 @@
     </div>
 
     <div class="width100">
-      <div class="div-inline width6 history">
-        <ul>
-          <li style="margin-top:3px;"><img src="img/coin1.png"></li>
-          <li><img src="img/coin2.png"></li>
-          <li><img src="img/coin3.png"></li>
-          <li><img src="img/coin4.png"></li>
-          <li><img src="img/coin5.png"></li>
-          <li><img src="img/coin6.png"></li>
+     <div class="div-inline width6 history">
+        <ul class="coin">
+          <li style="margin-top:3px;">
+            <div id="first" ng-click="showCoin(first);"><img src="img/coin1.png">
+            </div>
+          </li>
+          <li><div id="second" ng-click="showCoin();"><img src="img/coin2.png"></div></li>
+          <li><div><img src="img/coin3.png"></div></li>
+          <li><div><img src="img/coin4.png"></div></li>
+          <li><div><img src="img/coin5.png"></div></li>
+          <li><div><img src="img/coin6.png"></div></li>
         </ul>
       </div>
       <div class="div-inline width80">

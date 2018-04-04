@@ -9969,7 +9969,7 @@ tr {
   text-align: center;
   border-radius: 5px !important;
   vertical-align: top !important;
-  height: 230px;
+  height: 250px;
   border: 1px solid rgba(255, 255, 255, 0.46); }
   .history span {
     transform: rotate(0deg) !important;
@@ -10701,3 +10701,15 @@ tr {
       line-height: 120%; }
     .login .login_block .invailduser {
       width: 100%; }
+
+.absolute-coin img {
+  position: absolute;
+  top: 0;
+  left: 0px; }
+
+.coin img {
+  box-shadow: 1px 1px 20px white;
+  border-radius: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.73);
+  border: 1px solid rgba(255, 255, 255, 0.1); }
