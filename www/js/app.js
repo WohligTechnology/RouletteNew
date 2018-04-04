@@ -45,6 +45,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     cache:false,
     templateUrl: 'templates/spinner.html',
     controller:'SpinnerCtrl'
+  })
+    .state('login', {
+    url: '/login',
+    cache:false,
+    templateUrl: 'templates/login.html',
+    controller:'LoginCtrl'
   });
 
 
