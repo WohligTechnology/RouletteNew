@@ -79,7 +79,16 @@ tr {
 .width80 {
   width: 80%;
 }
-
+.btn-width {
+  width: 14%;
+}
+.spinner-table{
+  display: table;
+}
+.spinner-cell{
+  display: table-cell;
+  vertical-align: middle;
+}
 .roulette td div {
   padding: 5px;
   margin: 2px;
@@ -127,7 +136,16 @@ tr {
 }
 
 .scroll{
-  overflow-y: scroll;
+     height: 230px;
+        overflow: hidden;
+        overflow-y: auto;
+         &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
 }
 /* elements */
 
@@ -498,10 +516,13 @@ tr {
     border-radius: 5px;
     width: 100%;
     // border-bottom: 2px solid #291906;
-    display: flex;
+    display: table;
     justify-content: center;
     align-items: right;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+
   }
   .pieBackground {
     // background-color: rgba(240, 240, 240, 1);
