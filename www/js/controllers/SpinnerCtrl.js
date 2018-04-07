@@ -1,4 +1,4 @@
-connector.controller('SpinnerCtrl', function ($scope, $ionicModal) {
+connector.controller('SpinnerCtrl', function ($scope, $ionicModal, $timeout) {
   console.log("Spinner");
   var rotationsTime = 8;
   var wheelSpinTime = 6;
@@ -135,16 +135,33 @@ connector.controller('SpinnerCtrl', function ($scope, $ionicModal) {
     //console.log(numberLoc);
   }
 
-  btnSpin.click(function () {
+  $timeout(function () {
+    console.log("btn clicked");
     if ($("input").val() == "") {
+      console.log("inside if");
       var rndNum = Math.floor(Math.random() * 34 + 0);
     } else {
+      console.log("inside else");
       var rndNum = $("input").val();
     }
 
     winningNum = rndNum;
     spinTo(winningNum);
-  });
+  }, 100);
+
+  // btnSpin.click(function () {
+  //   console.log("btn clicked");
+  //   if ($("input").val() == "") {
+  //     console.log("inside if");
+  //     var rndNum = Math.floor(Math.random() * 34 + 0);
+  //   } else {
+  //     console.log("inside else");
+  //     var rndNum = $("input").val();
+  //   }
+
+  //   winningNum = rndNum;
+  //   spinTo(winningNum);
+  // });
 
   $("#btnb").click(function () {
     $(".spinner").css("font-size", "+=.3em");
