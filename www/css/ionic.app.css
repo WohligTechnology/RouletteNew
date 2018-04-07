@@ -9883,7 +9883,7 @@ p {
   margin: 0px; }
 
 .pdbutton {
-  padding: 10px 20px !important; }
+  padding: 5px 15px !important; }
 
 .roulette {
   padding: 20px;
@@ -9921,7 +9921,7 @@ tr {
   width: 10%; }
 
 .width6 {
-  width: 6%; }
+  width: 7%; }
 
 .width80 {
   width: 80%; }
@@ -9937,29 +9937,29 @@ tr {
   vertical-align: middle; }
 
 .roulette td div {
-  padding: 5px;
+  padding: 2px;
   margin: 2px;
   border-spacing: 0;
   border-collapse: collapse;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50px;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
   color: white;
   margin: 0 auto;
   white-space: nowrap; }
 
 .roulette td {
   border: 2px solid rgba(255, 255, 0, 0.7);
-  height: 46px;
+  height: 40px;
   border-radius: 50px;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
   color: white;
   position: relative;
   white-space: nowrap; }
@@ -9974,7 +9974,7 @@ tr {
   border: 1px solid rgba(255, 255, 255, 0.46); }
   .history span {
     transform: rotate(0deg) !important;
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px;
     padding-top: 3px;
     font-weight: 600; }
@@ -9994,17 +9994,17 @@ tr {
   background: #1C7022; }
 
 .roulette .sector .vt {
-  font-size: 15px; }
+  font-size: 10px; }
 
 .roulette .num {
-  font-size: 15px; }
+  font-size: 10px; }
 
 .roulette .num span {
   display: block;
   transform: rotate(270deg); }
 
 .roulette .zero {
-  width: 70px;
+  width: 50px;
   font-size: 40px;
   padding: 0 10px; }
 
@@ -10256,7 +10256,9 @@ tr {
   margin-bottom: 5px;
   background: black;
   color: white;
-  padding: 0px 30px;
+  padding: 0px 15px;
+  font-size: 5px;
+  line-height: 1.5;
   margin-right: 8px;
   vertical-align: middle;
   border: 1px solid rgba(255, 255, 255, 0.46); }
@@ -10714,3 +10716,8 @@ tr {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.73);
   border: 1px solid rgba(255, 255, 255, 0.1); }
+
+.absolute-button {
+  position: absolute;
+  bottom: 5%;
+  left: 15%; }
