@@ -1,5 +1,7 @@
 myApp = angular.module('starter.services', []);
-var url = "http://192.168.2.21:1337/api/";
+// var url = "http://192.168.2.21:1337/api/";
+var url = "http://192.168.1.112:1337/api/";
+
 // var url = "localhost:1337/api/";
 // var imgurl = adminurl + "upload/";
 // var imgpath = imgurl + "readFile";

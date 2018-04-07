@@ -147,7 +147,12 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
   };
 
   $scope.bet = [];
-  $scope.amount = 0;
+  $scope.amountBet = [];
+  $scope.betUser = [{
+    bet: '',
+    amount: ''
+  }];;
+  $scope.amount = $scope.betAmount = 0;
   $scope.userBet = function (betName, bet) {
     console.log("betNumber", betName, typeof (betName));
     // $scope.bet = betName;
@@ -160,49 +165,59 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
       if ($scope.coinSelects == "coin1") {
         $scope.coin1[field] = true;
         $scope.coin1.count++;
-        $scope.userBet1.amountplaces = $scope.coin1.amount;
+        $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin1.amount;
         $scope.amount = $scope.amount + $scope.coin1.amount;
       }
       if ($scope.coinSelects == "coin2") {
         $scope.coin2[field] = true;
         $scope.coin2.count++;
-        $scope.userBet1.amountplaces = $scope.coin2.amount;
+        $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin2.amount;
         $scope.amount = $scope.amount + $scope.coin2.amount;
       }
       if ($scope.coinSelects == "coin3") {
         $scope.coin3[field] = true;
         $scope.coin3.count++;
-        $scope.userBet1.amountplaces = $scope.coin3.amount;
+        $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin3.amount;
         $scope.amount = $scope.amount + $scope.coin3.amount;
       }
       if ($scope.coinSelects == "coin4") {
         $scope.coin4[field] = true;
         $scope.coin4.count++;
-        $scope.userBet1.amountplaces = $scope.coin4.amount;
+        $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin4.amount;
         $scope.amount = $scope.amount + $scope.coin4.amount;
       }
       if ($scope.coinSelects == "coin5") {
         $scope.coin5[field] = true;
         $scope.coin5.count++;
-        $scope.userBet1.amountplaces = $scope.coin5.amount;
+        $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin5.amount;
         $scope.amount = $scope.amount + $scope.coin5.amount;
       }
       if ($scope.coinSelects == "coin6") {
         $scope.coin6[field] = true;
         $scope.coin6.count++;
-        $scope.userBet1.amountplaces = $scope.coin6.amount;
+        $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin6.amount;
         $scope.amount = $scope.amount + $scope.coin6.amount;
       }
-
+      if ($scope.amountBet[field]) {
+        $scope.amountBet[field] = $scope.amountBet[field] + $scope.betAmount;
+      } else {
+        $scope.amountBet[field] = $scope.betAmount;
+      }
+      // $scope.betUser.push({
+      //   bet: betName,
+      //   amountplaces: $scope.amountBet[field]
+      // });
+      console.log("$scope.betAmount", $scope.betAmount);
+      console.log("$scope.amount[field]$scope.amount[field]", $scope.amountBet);
       console.log("$scope.amount $scope.amount ", $scope.amount);
       console.log("$scope.bet$scope.bet", $scope.bet[field], $scope.coin1);
       console.log("$scope.bet$scope.bet", $scope.bet[field], $scope.coin2);
 
       $scope.userBet1.bet = betName;
       console.log("$scope.userBet1", $scope.userBet1);
-      Service.saveUserBets($scope.userBet1, function (data) {
-        console.log("################", data)
-      });
+      // Service.saveUserBets($scope.userBet1, function (data) {
+      //   console.log("################", data)
+      // });
     } else {
       $scope.message = {
         heading: "Please Select coin",
