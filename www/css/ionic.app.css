@@ -9961,6 +9961,7 @@ tr {
   font-weight: bold;
   font-size: 15px;
   color: white;
+  position: relative;
   white-space: nowrap; }
 
 .history {
