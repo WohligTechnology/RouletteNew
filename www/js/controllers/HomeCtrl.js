@@ -148,10 +148,7 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
 
   $scope.bet = [];
   $scope.amountBet = [];
-  $scope.betUser = [{
-    bet: '',
-    amount: ''
-  }];;
+  $scope.betUser = [];
   $scope.amount = $scope.betAmount = 0;
   $scope.userBet = function (betName, bet) {
     console.log("betNumber", betName, typeof (betName));
@@ -203,21 +200,33 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
       } else {
         $scope.amountBet[field] = $scope.betAmount;
       }
-      // $scope.betUser.push({
-      //   bet: betName,
-      //   amountplaces: $scope.amountBet[field]
-      // });
+      if ($scope.betUser.length != 0) {
+        var index = _.find($scope.betUser,
+          function (o) {
+            return o.bet == betName;
+          });
+
+        if (index == undefined) {
+          $scope.betUser.push({
+            bet: betName,
+            amountplaces: $scope.amountBet[bet]
+          });
+        } else {
+          index.amountplaces = $scope.amountBet[bet];
+        }
+      } else {
+        $scope.betUser.push({
+          bet: betName,
+          amountplaces: $scope.amountBet[bet]
+        });
+      }
+
       console.log("$scope.betAmount", $scope.betAmount);
       console.log("$scope.amount[field]$scope.amount[field]", $scope.amountBet);
       console.log("$scope.amount $scope.amount ", $scope.amount);
-      console.log("$scope.bet$scope.bet", $scope.bet[field], $scope.coin1);
-      console.log("$scope.bet$scope.bet", $scope.bet[field], $scope.coin2);
+      console.log(" $scope.betUser $scope.betUser ", $scope.betUser);
 
-      $scope.userBet1.bet = betName;
       console.log("$scope.userBet1", $scope.userBet1);
-      // Service.saveUserBets($scope.userBet1, function (data) {
-      //   console.log("################", data)
-      // });
     } else {
       $scope.message = {
         heading: "Please Select coin",
@@ -227,6 +236,17 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
     }
 
   }
+  if ($scope.betUser) {
+    $timeout(function () {
+      console.log("in timeout function ", $scope.betUser);
+      _.each($scope.betUser, function (user) {
+        Service.saveUserBets(user, function (data) {
+          console.log("################", data)
+        })
+      });
+    }, 30000);
+  }
+
   $scope.logout = function () {
     Service.playerLogout(function (data) {
       if (data.data.value) {
