@@ -30,7 +30,7 @@ p {
 }
 
 .pdbutton {
-  padding: 10px 20px !important;
+  padding: 5px 15px !important;
 }
 
 .roulette {
@@ -78,7 +78,7 @@ tr {
 }
 
 .width6 {
-  width: 6%;
+  width: 7%;
 }
 
 .width80 {
@@ -99,17 +99,17 @@ tr {
 }
 
 .roulette td div {
-  padding: 5px;
+  padding: 2px;
   margin: 2px;
   border-spacing: 0;
   border-collapse: collapse;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50px;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
   color: white;
   margin: 0 auto;
   white-space: nowrap;
@@ -117,12 +117,12 @@ tr {
 
 .roulette td {
   border: 2px solid rgba(255, 255, 0, 0.7);
-  height: 46px;
+  height: 40px;
   border-radius: 50px;
   text-align: center;
   vertical-align: middle;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
   color: white;
   position: relative;
   white-space: nowrap;
@@ -165,11 +165,11 @@ tr {
 }
 
 .roulette .sector .vt {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .roulette .num {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .roulette .num span {
@@ -178,15 +178,20 @@ tr {
 }
 
 .roulette .zero {
-  width: 70px;
+  width: 50px;
   font-size: 40px;
-  padding: 0 10px;
+  padding: 0px 15px;
+  font-size: 5px;
+  line-height: 1.5;
 }
 
 .roulette .empty {
   border: none;
 }
-
+.absolute-button {
+    position: absolute;
+   bottom: 5%;
+  left: 15%; }
 /* colors */
 
 .roulette .green {
@@ -499,8 +504,10 @@ tr {
   margin-bottom: 5px;
   background: black;
   color: white;
-  padding: 0px 30px;
+  padding: 0px 15px;
   margin-right: 8px;
+  line-height: 1.5;
+  font-size: 10px;
   vertical-align: middle;
   border: 1px solid rgba(255, 255, 255, 0.46);
 }
