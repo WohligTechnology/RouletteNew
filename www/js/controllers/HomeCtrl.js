@@ -247,6 +247,10 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
     }, 30000);
   }
 
+  io.socket.on("betsNotAllowed", function (data) {
+    console.log("in socket", data);
+  });
+
   $scope.logout = function () {
     Service.playerLogout(function (data) {
       if (data.data.value) {

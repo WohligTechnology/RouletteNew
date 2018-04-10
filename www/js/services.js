@@ -11,11 +11,11 @@ myApp.factory('Service', function ($http, $ionicLoading, $ionicActionSheet, $tim
   // Some fake testing data
 
 
-  // io.socket.on('connect', function (socket) {
-  //   socketId = io.socket._raw.id;
-  //   $.jStorage.set("socketId", io.socket._raw.id);
-  //   obj.connectSocket(function () {});
-  // });
+  io.socket.on('connect', function (socket) {
+    socketId = io.socket._raw.id;
+    $.jStorage.set("socketId", io.socket._raw.id);
+    obj.connectSocket(function () {});
+  });
 
   var obj = {
     all: function () {
