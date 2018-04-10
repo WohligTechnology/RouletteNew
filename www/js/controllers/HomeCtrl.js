@@ -237,18 +237,24 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
 
   }
   if ($scope.betUser) {
-    $timeout(function () {
-      console.log("in timeout function ", $scope.betUser);
-      _.each($scope.betUser, function (user) {
-        Service.saveUserBets(user, function (data) {
-          console.log("################", data)
-        })
-      });
-    }, 30000);
+    // $timeout(function () {
+
+    // }, 30000);
   }
 
   io.socket.on("betsNotAllowed", function (data) {
     console.log("in socket", data);
+    if (data.data == "Bets are Not Allowed") {
+      console.log("in timeout function ", $scope.betUser);
+      if ($scope.betUser) {
+        _.each($scope.betUser, function (user) {
+          Service.saveUserBets(user, function (data) {
+            console.log("################", data)
+          })
+        });
+      }
+      $state.go("spinner");
+    }
   });
 
   $scope.logout = function () {

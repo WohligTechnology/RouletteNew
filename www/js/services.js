@@ -1,6 +1,6 @@
 myApp = angular.module('starter.services', []);
 // var url = "http://192.168.2.21:1337/api/";
-var url = "http://192.168.1.112:1337/api/";
+
 // var url = "localhost:1337/api/";
 // var imgurl = adminurl + "upload/";
 // var imgpath = imgurl + "readFile";
@@ -11,11 +11,11 @@ myApp.factory('Service', function ($http, $ionicLoading, $ionicActionSheet, $tim
   // Some fake testing data
 
 
-  io.socket.on('connect', function (socket) {
-    socketId = io.socket._raw.id;
-    $.jStorage.set("socketId", io.socket._raw.id);
-    obj.connectSocket(function () {});
-  });
+  // io.socket.on('connect', function (socket) {
+  //   socketId = io.socket._raw.id;
+  //   $.jStorage.set("socketId", io.socket._raw.id);
+  //   obj.connectSocket(function () {});
+  // });
 
   var obj = {
     all: function () {
