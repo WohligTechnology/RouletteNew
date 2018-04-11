@@ -252,7 +252,8 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
       if ($scope.betUser) {
         _.each($scope.betUser, function (user) {
           Service.saveUserBets(user, function (data) {
-            console.log("################", data)
+            console.log("################", data);
+            $rootScope.result = data.data.results;
           })
         });
       }

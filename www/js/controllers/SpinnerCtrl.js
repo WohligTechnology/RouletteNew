@@ -96,6 +96,8 @@ connector.controller('SpinnerCtrl', function ($scope, $ionicModal, $timeout) {
 
   createWheel();
 
+  $scope.results = $rootScope.result;
+
   function createWheel() {
     var temparc = 360 / numorder.length;
     for (var i = 0; i < numorder.length; i++) {
