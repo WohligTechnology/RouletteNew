@@ -32,6 +32,8 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
 
   $scope.playerData();
 
+  $scope.coins = ["coin1", "coin2", "coin3", "coin4", "coin5", "coin6"];
+
   $scope.coinSelect = function (coin) {
     switch (coin) {
       case "coin1":
@@ -115,7 +117,7 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
         break;
       case "coin6":
         // $scope.coin6 = true;
-        $scope.coinSelects = "coin2";
+        $scope.coinSelects = "coin6";
         if ($scope.coin6) {
 
         } else {
@@ -163,7 +165,8 @@ connector.controller('HomeCtrl', function ($scope, $ionicModal, Service, $state,
         $scope.coin1[field] = true;
         $scope.coin1.count++;
         $scope.userBet1.amountplaces = $scope.betAmount = $scope.coin1.amount;
-        $scope.amount = $scope.amount + $scope.coin1.amount;
+        $scope.coinAmount[field]=$scope.coinSelects;
+        $scope.amount = _.round($scope.amount + $scope.coin1.amount, 2);
       }
       if ($scope.coinSelects == "coin2") {
         $scope.coin2[field] = true;

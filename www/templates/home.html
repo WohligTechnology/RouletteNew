@@ -5,13 +5,13 @@
       <p>$1000</p>
     </div>
     <div class="div-inline upper-button">
+      <span>Current Bet</span>
+      <p>{{amount}} &#8377;</p>
+    </div>
+    <!-- <div class="div-inline upper-button">
       <span>Money</span>
       <p>$1000</p>
-    </div>
-    <div class="div-inline upper-button">
-      <span>Money</span>
-      <p>$1000</p>
-    </div>
+    </div> -->
     <div class="div-inline upper-button">
       <span>Logout</span>
       <button ng-click="logout()"></button>
@@ -20,11 +20,11 @@
     <div class="width100">
       <div class="div-inline width6 history">
         <ul class="coin">
-          <li style="margin-top:3px;">
-            <div id="first"><img src="img/coin1.png" ng-click="coinSelect('coin1')">
+          <li style="margin-top:3px;" ng-repeat="coin in coins">
+            <div><img src="img/{{coin}}.png" ng-class="{{coin}}.{{coin}}?'MyClass':'MyClass1'" ng-click="coinSelect('{{coin}}')">
             </div>
           </li>
-          <li>
+          <!-- <li>
             <div id="second"><img src="img/coin2.png" ng-click="coinSelect('coin2')"></div>
           </li>
           <li>
@@ -38,7 +38,7 @@
           </li>
           <li>
             <div><img src="img/coin6.png" ng-click="coinSelect('coin6')"></div>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="div-inline width80">
@@ -52,7 +52,7 @@
                   <div ng-if="coin1.coin1 && coin1.three">
                     <img src="img/coin1.png">
                   </div>
-                  <div ng-if="coin2.coin2 && coin1.three">
+                  <div ng-if="coin2.coin2 && coin2.three">
                     <img src="img/coin2.png">
                   </div>
                   <div ng-if="coin3.coin3 && coin3.three">
@@ -104,7 +104,7 @@
                   <div ng-if="coin2.coin2 && coin2.nine">
                     <img src="img/coin2.png">
                   </div>
-                  <div ng-if="coin3.coin2 && coin3.nine">
+                  <div ng-if="coin3.coin3 && coin3.nine">
                     <img src="img/coin3.png">
                   </div>
                   <div ng-if="coin4.coin4 && coin4.nine">
@@ -185,7 +185,7 @@
                   <div ng-if="coin5.coin5 && coin5.eighteen">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.eighteen">
+                  <div ng-if="coin6.coin6 && coin6.eighteen">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -209,7 +209,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyOne">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyOne">
+                  <div ng-if="coin6.coin6 && coin6.twentyOne">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -233,7 +233,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyFour">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyFour">
+                  <div ng-if="coin6.coin6 && coin6.twentyFour">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -257,7 +257,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentySeven">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentySeven">
+                  <div ng-if="coin6.coin6 && coin6.twentySeven">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -281,7 +281,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirty">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirty">
+                  <div ng-if="coin6.coin6 && coin6.thirty">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -305,7 +305,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirtyThree">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirtyThree">
+                  <div ng-if="coin6.coin6 && coin6.thirtyThree">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -329,7 +329,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirtySix">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirtySix">
+                  <div ng-if="coin6.coin6 && coin6.thirtySix">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -352,7 +352,7 @@
                 <div ng-if="coin5.coin5 && coin5.thirdColumn">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.thirdColumn">
+                <div ng-if="coin6.coin6 && coin6.thirdColumn">
                   <img src="img/coin6.png">
                 </div>
               </div>
@@ -379,7 +379,7 @@
                   <div ng-if="coin5.coin5 && coin5.two">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.two">
+                  <div ng-if="coin6.coin6 && coin6.two">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -403,7 +403,7 @@
                   <div ng-if="coin5.coin5 && coin5.five">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.five">
+                  <div ng-if="coin6.coin6 && coin6.five">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -427,7 +427,7 @@
                   <div ng-if="coin5.coin5 && coin5.eight">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.eight">
+                  <div ng-if="coin6.coin6 && coin6.eight">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -451,7 +451,7 @@
                   <div ng-if="coin5.coin5 && coin5.eleven">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.eleven">
+                  <div ng-if="coin6.coin6 && coin6.eleven">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -475,7 +475,7 @@
                   <div ng-if="coin5.coin5 && coin5.fourteen">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.fourteen">
+                  <div ng-if="coin6.coin6 && coin6.fourteen">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -499,7 +499,7 @@
                   <div ng-if="coin5.coin5 && coin5.seventeen">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.seventeen">
+                  <div ng-if="coin6.coin6 && coin6.seventeen">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -523,7 +523,7 @@
                   <div ng-if="coin5.coin5 && coin5.twenty">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twenty">
+                  <div ng-if="coin6.coin6 && coin6.twenty">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -547,7 +547,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyThree">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyThree">
+                  <div ng-if="coin6.coin6 && coin6.twentyThree">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -571,7 +571,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentySix">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentySix">
+                  <div ng-if="coin6.coin6 && coin6.twentySix">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -595,7 +595,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyNine">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyNine">
+                  <div ng-if="coin6.coin6 && coin6.twentyNine">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -619,7 +619,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirtyTwo">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirtyTwo">
+                  <div ng-if="coin6.coin6 && coin6.thirtyTwo">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -643,14 +643,14 @@
                   <div ng-if="coin5.coin5 && coin5.thirtyFive">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirtyFive">
+                  <div ng-if="coin6.coin6 && coin6.thirtyFive">
                     <img src="img/coin6.png">
                   </div>
                 </div>
               </div>
             </td>
             <td class="sector" data-sector="2" ng-click="userBet('2nd column','secondColumn')"><span class="vt">2 to 1</span>
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.secondColumn">
                   <img src="img/coin1.png">
                 </div>
@@ -666,7 +666,7 @@
                 <div ng-if="coin5.coin5 && coin5.secondColumn">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.secondColumn">
+                <div ng-if="coin6.coin6 && coin6.secondColumn">
                   <img src="img/coin6.png">
                 </div>
               </div>
@@ -692,7 +692,7 @@
                   <div ng-if="coin5.coin5 && coin5.one">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.one">
+                  <div ng-if="coin6.coin6 && coin6.one">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -716,7 +716,7 @@
                   <div ng-if="coin5.coin5 && coin5.four">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.four">
+                  <div ng-if="coin6.coin6 && coin6.four">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -740,7 +740,7 @@
                   <div ng-if="coin5.coin5 && coin5.seven">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.seven">
+                  <div ng-if="coin6.coin6 && coin6.seven">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -764,7 +764,7 @@
                   <div ng-if="coin5.coin5 && coin5.ten">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.ten">
+                  <div ng-if="coin6.coin6 && coin6.ten">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -788,7 +788,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirteen">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirteen">
+                  <div ng-if="coin6.coin6 && coin6.thirteen">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -812,7 +812,7 @@
                   <div ng-if="coin5.coin5 && coin5.sixteen">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.sixteen">
+                  <div ng-if="coin6.coin6 && coin6.sixteen">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -836,7 +836,7 @@
                   <div ng-if="coin5.coin5 && coin5.nineteen">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.nineteen">
+                  <div ng-if="coin6.coin6 && coin6.nineteen">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -860,7 +860,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyTwo">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyTwo">
+                  <div ng-if="coin6.coin6 && coin6.twentyTwo">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -884,7 +884,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyFive">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyFive">
+                  <div ng-if="coin6.coin6 && coin6.twentyFive">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -908,7 +908,7 @@
                   <div ng-if="coin5.coin5 && coin5.twentyEight">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.twentyEight">
+                  <div ng-if="coin6.coin6 && coin6.twentyEight">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -932,7 +932,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirtyOne">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirtyOne">
+                  <div ng-if="coin6.coin6 && coin6.thirtyOne">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -956,7 +956,7 @@
                   <div ng-if="coin5.coin5 && coin5.thirtyFour">
                     <img src="img/coin5.png">
                   </div>
-                  <div ng-if="coin3.coin6 && coin6.thirtyFour">
+                  <div ng-if="coin6.coin6 && coin6.thirtyFour">
                     <img src="img/coin6.png">
                   </div>
                 </div>
@@ -979,7 +979,7 @@
                 <div ng-if="coin5.coin5 && coin5.firstColumn">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.firstColumn">
+                <div ng-if="coin6.coin6 && coin6.firstColumn">
                   <img src="img/coin6.png">
                 </div>
               </div>
@@ -988,7 +988,7 @@
           <tr>
             <td class="empty"></td>
             <td colspan="4" class="sector" data-sector="4" ng-click="userBet('First Dozen', 'firstDozen')">1st 12
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.firstDozen">
                   <img src="img/coin1.png">
                 </div>
@@ -1004,13 +1004,13 @@
                 <div ng-if="coin5.coin5 && coin5.firstDozen">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.firstDozen">
+                <div ng-if="coin6.coin6 && coin6.firstDozen">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="4" class="sector" data-sector="5" ng-click="userBet('Middle Dozen','middleDozen')">2nd 12
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.middleDozen">
                   <img src="img/coin1.png">
                 </div>
@@ -1026,13 +1026,13 @@
                 <div ng-if="coin5.coin5 && coin5.middleDozen">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.middleDozen">
+                <div ng-if="coin6.coin6 && coin6.middleDozen">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="4" class="sector" data-sector="6" ng-click="userBet('Last Dozen','lastDozen')">3rd 12
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.lastDozen">
                   <img src="img/coin1.png">
                 </div>
@@ -1048,7 +1048,7 @@
                 <div ng-if="coin5.coin5 && coin5.lastDozen">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.lastDozen">
+                <div ng-if="coin6.coin6 && coin6.lastDozen">
                   <img src="img/coin6.png">
                 </div>
               </div>
@@ -1058,7 +1058,7 @@
           <tr>
             <td class="empty"></td>
             <td colspan="2" class="sector" data-sector="7" ng-click="userBet('Low Bet','lowBet')">1 to 18
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.lowBet">
                   <img src="img/coin1.png">
                 </div>
@@ -1074,13 +1074,13 @@
                 <div ng-if="coin5.coin5 && coin5.lowBet">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.lowBet">
+                <div ng-if="coin6.coin6 && coin6.lowBet">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="2" class="sector" data-sector="8" ng-click="userBet('Even number','evenNumber')">EVEN
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.evenNumber">
                   <img src="img/coin1.png">
                 </div>
@@ -1096,13 +1096,13 @@
                 <div ng-if="coin5.coin5 && coin5.evenNumber">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.evenNumber">
+                <div ng-if="coin6.coin6 && coin6.evenNumber">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="2" class="sector red" data-sector="9" ng-click="userBet('Red color','redColor')">RED
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.redColor">
                   <img src="img/coin1.png">
                 </div>
@@ -1118,13 +1118,13 @@
                 <div ng-if="coin5.coin5 && coin5.redColor">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.redColor">
+                <div ng-if="coin6.coin6 && coin6.redColor">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="2" class="sector black" data-sector="10" ng-click="userBet('Black color','blackColor')">BLACK
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.blackColor">
                   <img src="img/coin1.png">
                 </div>
@@ -1140,13 +1140,13 @@
                 <div ng-if="coin5.coin5 && coin5.blackColor">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.blackColor">
+                <div ng-if="coin6.coin6 && coin6.blackColor">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="2" class="sector" data-sector="11" ng-click="userBet('Odd numbers','oddNumber')">ODD
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.oddNumber">
                   <img src="img/coin1.png">
                 </div>
@@ -1162,13 +1162,13 @@
                 <div ng-if="coin5.coin5 && coin5.oddNumber">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.oddNumber">
+                <div ng-if="coin6.coin6 && coin6.oddNumber">
                   <img src="img/coin6.png">
                 </div>
               </div>
             </td>
             <td colspan="2" class="sector" data-sector="12" ng-click="userBet('High Bet', 'highBet')">19 to 36
-              <div class="absolute-coin">
+              <div class="absolute-coin-big">
                 <div ng-if="coin1.coin1 && coin1.highBet">
                   <img src="img/coin1.png">
                 </div>
@@ -1184,7 +1184,7 @@
                 <div ng-if="coin5.coin5 && coin5.highBet">
                   <img src="img/coin5.png">
                 </div>
-                <div ng-if="coin3.coin6 && coin6.highBet">
+                <div ng-if="coin6.coin6 && coin6.highBet">
                   <img src="img/coin6.png">
                 </div>
               </div>
